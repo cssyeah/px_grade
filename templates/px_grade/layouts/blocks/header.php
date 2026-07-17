@@ -23,20 +23,15 @@ $menu_fixed = $params->get('menu_fixed','0');
 $show_dark_light_mode = $params->get('show_dark_light_mode','0');
 ?>
 
+<!-- TOPBAR -->
 <?php if($doc->countModules('topbar')): ?>
-<div id="px-topbar" class="px-topbar bg-warning text-white">
+<div id="px-topbar" class="px-topbar">
   <div class="container">
-    <div class="row">
-      <?php if($doc->countModules('topbar')): ?>
-      <div class="col-12 col-lg-6 px-topbar-mod d-none d-lg-block">
-        <jdoc:include type="modules" name="topbar" style="none" />
-      </div>
-      <?php endif; ?>
-      
-    </div>
+    <jdoc:include type="modules" name="topbar" style="none" />
   </div>
 </div>
 <?php endif; ?>
+<!-- // TOPBAR -->
 
 <header id="px-header" class="px-header <?php echo $menu_fixed ? 'px-fixed-top' : ''; ?>">
   <div id="px-header-nav" class="px-header-nav container">
